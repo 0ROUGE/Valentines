@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="vignette"></div>
+<div class="flowers-bg"></div>
+<canvas id="confettiCanvas"></canvas>
+<div class="cursor-glow"></div>
+
+<section class="hero">
+    <h1 id="greeting"></h1>
+    <h2 class="name">Christine</h2>
+    <p class="subtitle">Some things deserve to be said slowly.</p>
+</section>
+
+<section class="memory-section">
+    <div class="memory" style="background-image:url('First\ photo.jpeg')"></div>
+    <div class="memory-text">
+        <h3>When We Met</h3>
+        <p>
+            I didn’t know it then, but that moment quietly rearranged my world.
+            It felt ordinary on the surface — yet something in me knew
+            life had just shifted its direction.
+        </p>
+    </div>
+</section>
+
+<section class="memory-section reverse">
+    <div class="memory" style="background-image:url('Third\ photo.jpeg')"></div>
+    <div class="memory-text">
+        <h3>Our Journey</h3>
+        <p>
+            In laughter, in silence, in the smallest shared glances —
+            we built something steady and rare.
+            A story not rushed, not forced, just unfolding.
+        </p>
+    </div>
+</section>
+
+<section class="memory-section">
+    <div class="memory" style="background-image:url('Fourth\ photo.jpeg')"></div>
+    <div class="memory-text">
+        <h3>Now</h3>
+        <p>
+            And here we are.
+            Not perfect. Not scripted.
+            But real. Intentional. Ours.
+        </p>
+    </div>
+</section>
+
+<section class="letter-section">
+    <div class="letter">
+        <h2>A Letter To You</h2>
+        <p>
+            My love,
+            <br><br>
+            There is a quiet strength in what we share.
+            It reminds me of the way Fitzgerald once wrote,
+            <em>“I love her and that’s the beginning and end of everything.”</em>
+            <br><br>
+            What I feel for you is not loud or fleeting.
+            It is steady. It is chosen.
+            It grows in the in-between moments —
+            in conversations that stretch past midnight,
+            in shared silence that feels full rather than empty.
+            <br><br>
+            Jane Austen once said,
+            <em>“You must allow me to tell you how ardently I admire and love you.”</em>
+            If I could borrow those words, I would.
+            Because loving you feels less like chaos,
+            and more like coming home.
+            <br><br>
+            With you,
+            even ordinary days carry meaning.
+        </p>
+    </div>
+</section>
+
+<section class="question">
+    <h1>Will you be my Valentine?</h1>
+    <div class="buttons">
+        <button id="yesBtn" class="glass-btn gold">Yes</button>
+        <button id="noBtn" class="glass-btn">No</button>
+    </div>
+    <div id="response"></div>
+</section>
+
+<audio id="bgMusic" loop>
+<source src="https://dl.royaltysong.com/free-royalty-music/tiktok/peaceful-piano-background-music.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>

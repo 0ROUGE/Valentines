@@ -1,0 +1,128 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    background:#050505;
+    color:#e6c77b;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+/* Flowers background */
+.flowers-bg {
+    position:fixed;
+    inset:0;
+    background:url('Pipes.jpg') center/cover no-repeat;
+    opacity:0.05;
+    z-index:-2;
+}
+
+/* Vignette */
+.vignette {
+    position:fixed;
+    inset:0;
+    background:radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.85));
+    pointer-events:none;
+    z-index:10;
+}
+
+/* Hero */
+.hero {
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.name {
+    font-size:4rem;
+    font-family:'Cormorant Garamond',serif;
+}
+
+/* Memory Sections */
+.memory-section {
+    display:flex;
+    align-items:center;
+    gap:80px;
+    padding:10% 12%;
+}
+
+.reverse { flex-direction:row-reverse; }
+
+.memory {
+    width:400px;
+    height:500px;
+    background-size:cover;
+    background-position:center;
+    border-radius:12px;
+    box-shadow:0 0 80px rgba(230,199,123,0.1);
+    transform:scale(1.1);
+}
+
+.memory-text {
+    max-width:500px;
+}
+
+/* Letter */
+.letter-section {
+    padding:10% 20%;
+}
+
+.letter {
+    background:rgba(255,255,255,0.03);
+    backdrop-filter:blur(20px);
+    padding:60px;
+    border-radius:12px;
+    border:1px solid rgba(230,199,123,0.2);
+    font-family:'Cormorant Garamond',serif;
+    line-height:1.8;
+}
+
+/* Buttons */
+.buttons { margin-top:40px; }
+
+.glass-btn {
+    padding:15px 60px;
+    margin:10px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(230,199,123,0.5);
+    color:#e6c77b;
+    font-size:1rem;
+    border-radius:10px;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition:0.4s ease;
+}
+
+.glass-btn::after {
+    content:'';
+    position:absolute;
+    top:-100%;
+    left:-100%;
+    width:200%;
+    height:200%;
+    background:linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+    transform:rotate(25deg);
+    transition:0.7s;
+}
+
+.glass-btn:hover::after {
+    top:0;
+    left:0;
+}
+
+.gold {
+    background:#e6c77b;
+    color:#000;
+}
+
+/* Confetti canvas */
+#confettiCanvas {
+    position:fixed;
+    top:0;
+    left:0;
+    pointer-events:none;
+}
